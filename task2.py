@@ -3,7 +3,7 @@ def get_cats_info(path: str) -> list:
         with open(path, "r") as f:
             res = []
             for line in f:
-                line = line.strip().split(',')
+                line = line.strip().split(',')      #clearing line from spaces and spliting by ,
                 res.append({"id": line[0], "name": line[1], "age": line[2]})
             return res
     except (FileNotFoundError, IndexError):

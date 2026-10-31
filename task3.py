@@ -7,7 +7,7 @@ print(Fore.BLUE, str(p.name) + "/")
 try:  
     def parse_folder(path: Path, indent: int):
         for el in path.iterdir():
-            if el.is_dir():
+            if el.is_dir():             #if file is directory parse it and make bigger indent
                 print(Fore.BLUE, "    " * indent, str(el.name) + "/")
                 parse_folder(el, indent + 1)
             else:
