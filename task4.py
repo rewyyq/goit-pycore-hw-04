@@ -5,7 +5,7 @@ def parse_input(user_input):
 
 def add_contact(args, contacts):
     name, phone = args
-    contacts[name] = phone
+    contacts[name.capitalize()] = phone
     return "Contact added."
 
 def change_contact(args, contacts):
@@ -13,8 +13,7 @@ def change_contact(args, contacts):
     return "Contact changed."
 
 def find_contact(args, contacts):
-    name = args[0]
-    return contacts[name]
+    return contacts[args[0].capitalize()]
 
 def main():
     contacts = {}
